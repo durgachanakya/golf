@@ -9,8 +9,7 @@ hole_x = 800;
 block_image_width = 5;
 block_image_height = 5;
 
-hole.obj = "";
-ball_obj = "";
+
 
 function load_img(){
 
@@ -100,7 +99,7 @@ function my_keydown(e)
 
 	function left()
 	{
-		if(ball_x >5)
+		if(ball_x >0)
 		{
 				ball_x = ball_x - block_image_width;
 				console.log("block image width = " + block_image_width);
