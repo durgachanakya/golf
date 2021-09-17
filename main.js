@@ -17,8 +17,8 @@ function load_img(){
 		hole.obj.scaleToWidth(50);
 		hole.obj.scaleToHeight(50);
 		hole.obj.set({
-			top:ball_y,
-			left:ball_x
+			top:hole_y,
+			left:hole_x
 		});
 		canvas.add(hole.obj);
 	});
@@ -78,7 +78,7 @@ function my_keydown(e)
 	function up()
 	{
 		if(ball_y >=0){
-			ball_y = ball_y - block_img_height;
+			ball_y = ball_y - block_image_height;
 			console.log("block image height = " + block_image_height);
 			console.log("when up arrow key is pressed , X = " + ball_x + ",Y = " + ball_y);
 			canvas.remove(ball_obj);
@@ -89,7 +89,7 @@ function my_keydown(e)
 	function down()
 	{
 		if(ball_y >=450){
-			ball_y = ball_y + block_img_height;
+			ball_y = ball_y + block_image_height;
 			console.log("block image height = " + block_image_height);
 			console.log("when down arrow key is pressed , X = " + ball_x + ",Y = " + ball_y);
 			canvas.remove(ball_obj);
