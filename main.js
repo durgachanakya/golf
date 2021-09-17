@@ -9,6 +9,9 @@ hole_x = 800;
 block_image_width = 5;
 block_image_height = 5;
 
+hole.obj = "";
+ball_obj = "";
+
 function load_img(){
 
 	fabric.Image.fromURL("golf-h.png" , function(Img){
