@@ -89,7 +89,7 @@ function my_keydown(e)
 	function down()
 	{
 		if(ball_y >=450){
-			ball_y = ball_y - block_img_height;
+			ball_y = ball_y + block_img_height;
 			console.log("block image height = " + block_image_height);
 			console.log("when down arrow key is pressed , X = " + ball_x + ",Y = " + ball_y);
 			canvas.remove(ball_obj);
@@ -114,7 +114,7 @@ function my_keydown(e)
 	{
 		if(ball_x <=1050)
 		{
-			ball_x = ball_x - block_image_width;
+			ball_x = ball_x + block_image_width;
 				console.log("block image width = " + block_image_width);
 				console.log("when left arrow key is pressed , X = " + ball_x + ",Y = " + ball_y);
 				canvas.remove(ball_obj);
