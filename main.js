@@ -14,15 +14,15 @@ block_image_height = 5;
 function load_img(){
 
 	fabric.Image.fromURL("golf-h.png" , function(Img){
-		hole.obj = Img ;
+		hole_obj = Img ;
 
-		hole.obj.scaleToWidth(50);
-		hole.obj.scaleToHeight(50);
-		hole.obj.set({
+		hole_obj.scaleToWidth(50);
+		hole_obj.scaleToHeight(50);
+		hole_obj.set({
 			top:hole_y,
 			left:hole_x
 		});
-		canvas.add(hole.obj);
+		canvas.add(hole_obj);
 	});
 	new_image();
 }
@@ -52,6 +52,7 @@ function my_keydown(e)
 		canvas.remove(ball_obj);
 		document.getElementById("hd3").innerHTML="You have hit the goal";
 		document.getElementById("myCanvas").style.borderColor="red";
+		console.log("you have hit the goal");
 	}
 	
 	else{
@@ -78,7 +79,7 @@ function my_keydown(e)
 	}
 	
 	function up(){
-		if(ball_y >=0){
+		if(ball_y >=5){
 			ball_y = ball_y - block_image_height;
 			console.log("block image height = " + block_image_height);
 			console.log("when up arrow key is pressed , X = " + player_x + ",Y = " + player_y);
@@ -99,7 +100,7 @@ function my_keydown(e)
 
 	function left()
 	{
-		if(ball_x >0)
+		if(ball_x >5)
 		{
 				ball_x = ball_x - block_image_width;
 				console.log("block image width = " + block_image_width);
