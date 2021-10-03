@@ -78,23 +78,27 @@ function my_keydown(e)
 		}
 	}
 	
-	function up(){
-		if(ball_y >=5){
-			ball_y = ball_y - block_image_height;
-			console.log("block image height = " + block_image_height);
-			console.log("when up arrow key is pressed , X = " + player_x + ",Y = " + player_y);
-			canvas.remove(ball_object);
-			new_image();
+	function up()
+	{
+		if(ball_y >5)
+		{
+				ball_y = ball_y - block_image_height;
+				console.log("block image height = " + block_image_height);
+				console.log("when up arrow key is pressed , X = " + ball_x + ",Y = " + ball_y);
+				canvas.remove(ball_obj);
+				new_image();
+			
 		}
 	}
-
-	function down(){
-		if(ball_y <=450){
+	function down()
+	{
+		if(ball_y <=450)
+		{
 			ball_y = ball_y + block_image_height;
-			console.log("block image height = " + block_image_height);
-			console.log("when down arrow key is pressed , X = " + player_x + ",Y = " + player_y);
-			canvas.remove(player_object);
-			new_image();
+				console.log("block image height = " + block_image_height);
+				console.log("when down arrow key is pressed , X = " + ball_x + ",Y = " + ball_y);
+				canvas.remove(ball_obj);
+				new_image();
 		}
 	}
 
